@@ -1,0 +1,52 @@
+{
+  "labs": [
+    {
+      "title": "Machine Name",
+      "difficulty": "Easy",
+      "description": "Short summary of the target, main goal and what is being exploited.",
+      "keyWords": [
+        "Enumeration",
+        "Linux",
+        "Web"
+      ],
+      "platform": "Hack The Box",
+      "time": "2h 15m"
+    },
+    {
+      "title": "Machine Name",
+      "difficulty": "Medium",
+      "description": "Focus on privilege escalation and chained vulnerabilities across services.",
+      "keyWords": [
+        "Privilege Escalation",
+        "RCE",
+        "SUID"
+      ],
+      "platform": "TryHackMe",
+      "time": "3h 40m"
+    },
+    {
+      "title": "Machine Name",
+      "difficulty": "Hard",
+      "description": "Complex attack path involving misconfigurations and advanced exploitation.",
+      "keyWords": [
+        "Active Directory",
+        "Kerberos",
+        "Lateral Movement"
+      ],
+      "platform": "Hack The Box",
+      "time": "6h 10m"
+    },
+    {
+      "title": "Custom Lab",
+      "difficulty": "Medium",
+      "description": "Custom-built vulnerable lab to practice web exploitation techniques.",
+      "keyWords": [
+        "SQL Injection",
+        "XSS",
+        "Web Security"
+      ],
+      "platform": "Self-hosted",
+      "time": "1h 30m"
+    }
+  ]
+}

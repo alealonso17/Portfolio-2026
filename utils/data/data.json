@@ -1,0 +1,98 @@
+{
+  "projects": [
+    {
+      "id": "uniconnect",
+      "title": "UniConnect",
+      "description": "A university-focused social network designed to connect students through posts, profiles and interactions, with strong emphasis on security, scalability and clean UI/UX.",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MySQL",
+        "TailwindCSS",
+        "JavaScript",
+        "Figma"
+      ],
+      "securityFeatures": [
+        "OWASP Top 10 mitigations",
+        "JWT authentication",
+        "Password hashing (bcrypt)",
+        "Rate limiting",
+        "Input validation & sanitization",
+        "Access control & authorization",
+        "Secure session handling"
+      ],
+      "architecture": "Full-stack MVC architecture with RESTful API, separated frontend and backend layers, and a relational database schema designed for scalability.",
+      "githubLink": "https://github.com/yourusername/uniconnect",
+      "securityDoc": "/docs/uniconnect-security.pdf",
+      "image":"/public/images/webs/uniconnect.png"
+    },
+
+    {
+      "id": "wild-buddy",
+      "title": "Wild Buddy",
+      "description": "A machine learning project focused on animal identification and tracking, designed to assist students, researchers and wildlife enthusiasts.",
+      "techStack": [
+        "Python",
+        "scikit-learn",
+        "pandas",
+        "NumPy",
+        "OpenCV"
+      ],
+      "securityFeatures": [
+        "Input validation for uploaded data",
+        "Safe file handling",
+        "Local data processing (no cloud dependency)",
+        "Model integrity checks"
+      ],
+      "architecture": "Modular Python application with separated data processing, model inference and visualization layers.",
+      "githubLink": "https://github.com/yourusername/wild-buddy",
+      "securityDoc": "/docs/wild-buddy-security.pdf",
+      "image":"/public/images/webs/wild.png"
+    },
+
+    {
+      "id": "deadline-hell",
+      "title": "Deadline Hell",
+      "description": "A productivity web application built to help students track deadlines, assessments and academic workload efficiently.",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MySQL",
+        "TailwindCSS",
+        "JavaScript"
+      ],
+      "securityFeatures": [
+        "Secure authentication",
+        "User data isolation",
+        "Protected routes",
+        "Input validation",
+        "SQL injection prevention"
+      ],
+      "architecture": "Server-rendered web application with Express, structured routing and database-driven task management.",
+      "githubLink": "https://github.com/yourusername/deadline-hell",
+      "securityDoc": "/docs/deadline-hell-security.pdf",
+      "image":"/public/images/webs/deadline.png"
+    },
+
+    {
+      "id": "bakio-surf-cleaner",
+      "title": "Bakio Surf Cleaner",
+      "description": "A desktop application created for a surf school to automatically clean and organize session video clips, saving time for instructors and staff.",
+      "techStack": [
+        "Python",
+        "Tkinter",
+        "FFmpeg"
+      ],
+      "securityFeatures": [
+        "Local-only processing",
+        "Safe file handling",
+        "Controlled directory access",
+        "No external data transmission"
+      ],
+      "architecture": "Standalone desktop application with a simple GUI layer and a backend processing engine for video management.",
+      "githubLink": "https://github.com/yourusername/bakio-surf-cleaner",
+      "securityDoc": "/docs/bakio-surf-cleaner-security.pdf",
+      "image":"/public/images/webs/bakio.png"
+    }
+  ]
+}

@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Alejandro Alonso — Software Development & Cybersecurity</title>
+
+    <style>
+        body {
+            background-color: #0a0a0f;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #6366f1, #8b5cf6);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #8b5cf6, #a855f7);
+        }
+
+        ::selection {
+            background-color: rgba(99, 102, 241, 0.3);
+            color: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
 </head>
 
 <body class="relative min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
@@ -31,71 +66,8 @@
     <!-- Content -->
 
     <!--Header-->
-    <header class="sticky top-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-xl border-b border-indigo-500/20">
-        <div class="flex items-center justify-between h-16 px-10">
-            <span class="font-mono text-indigo-400 text-lg mt-2">
-                root@alex
-            </span>
-            <div class="flex gap-[20px]">
-                <a href="index.html" class="flex items-center gap-2 px-4 py-2 rounded-xl text-[18px]
-          text-indigo-400 border border-indigo-500/40
-          bg-indigo-500/10
-          shadow-[0_0_20px_rgba(99,102,241,0.25)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-                    </svg>
-                    Home</a>
-                    
-                <a href=""
-                    class=" flex items-center gap-2 px-4 py-2 rounded-xl  text-gray-400 hover:text-indigo-400 transition-all text-[18px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                    </svg>
-                    Web Projects</a>
-
-                <a href=""
-                    class=" flex items-center gap-2 px-4 py-2 rounded-xl  text-gray-400 hover:text-indigo-400 transition-all text-[18px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 9v3.75m0-10.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286Zm0 13.036h.008v.008H12v-.008Z" />
-                    </svg>
-                    Cybersecurity Lab</a>
-
-                <a href=""
-                    class=" flex items-center gap-2 px-4 py-2 rounded-xl text-gray-400 hover:text-indigo-400 transition-all text-[18px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
-                    </svg>
-                    Python Games</a>
-
-                <a href=""
-                    class="flex items-center gap-2 px-4 py-2 rounded-xl  text-gray-400 hover:text-indigo-400 transition-all text-[18px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
-                    About Me</a>
-                <a href=""
-                    class="flex items-center gap-2 px-4 py-2 rounded-xl text-gray-400 hover:text-indigo-400 transition-all text-[18px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                    </svg>
-                    Contact</a>
-            </div>
-
-        </div>
-
-    </header>
+    <div id="header"></div>
+    <!--Loaded with load components -->
 
     <main
         class="relative  z-10 min-h-screen flex flex-col items-center justify-center text-center px-6 py-[100px] gap-[80px]">
@@ -105,7 +77,7 @@
             <div
                 class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400 animate-fadeInUp">
                 <i class="fas fa-terminal"></i>
-                <span>whoami → Full-Stack Developer & Offensive Security</span>
+                <span>whoami → Full-Stack Web & iOS Developer · Security & Offensive Thinking</span>
             </div>
             <!-- Título principal -->
             <div class="mt-[30px] space-y-4 animate-fadeInUp delay-100">
@@ -116,48 +88,49 @@
                     </span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-                    Full-stack developer building secure, scalable web applications,
-                    with a strong interest in offensive security and penetration testing.
+                    Full-stack developer focused on building scalable web and iOS applications, with a strong foundation
+                    in secure software development.
                 </p>
             </div>
 
-            <!-- Terminal animado -->
+
+            <!-- terminal -->
             <div
                 class="mt-[20px] max-w-2xl mx-auto bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-5 text-left animate-fadeIn delay-600">
-                <div class="flex items-center gap-2 mb-4 w-[1000px]">
-                    <div class="w-3 h-3 rounded-full bg-red-500 "></div>
+
+                <!-- top part -->
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
-
                 </div>
-                <div class="font-mono text-sm space-y-2">
-                    <div class="text-gray-500">
-                        <span class="text-green-400">$</span> cat profile.txt
-                    </div>
-                    <div class="text-indigo-400">
-                        → Full-Stack Developer
-                    </div>
-                    <div class="text-purple-400">
-                        → Security-focused mindset with hands-on offensive testing
-                    </div>
-                    <div class="text-pink-400">
-                        → Machine learning fundamentals & data handling
-                    </div>
-                    <div class="text-gray-500 flex items-center gap-2">
+
+
+
+                <!-- fucntional terminal -->
+                <div id="terminal" class="font-mono text-sm space-y-2 max-h-[260px] overflow-y-auto">
+
+                    <!-- dinamic output -->
+                    <div id="terminal-output"></div>
+
+                    <!-- Input -->
+                    <div class="flex items-center gap-2 text-gray-500">
                         <span class="text-green-400">$</span>
-                        <span class="cursor-blink">_</span>
+                        <input id="terminal-input" type="text" class="bg-transparent outline-none flex-1 text-gray-300"
+                            autocomplete="off" spellcheck="false" autofocus />
                     </div>
+
                 </div>
             </div>
 
 
             <!--buttons-->
-            <div class="mt-[30px] flex flex-wrap items-center justify-center gap-4 animate-fadeInUp delay-800">
-                <button class="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 
+            <div class=" mt-[30px] flex flex-wrap items-center justify-center gap-4 animate-fadeInUp delay-800">
+                <a href="projects.html" class="hover:cursor group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 
          rounded-xl overflow-hidden hover:shadow-lg hover:shadow-indigo-500/50 transition-all">
 
                     <div class="relative flex items-center gap-2">
-                        <span>View Projects</span>
+                        <span>View Web Projects</span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
@@ -166,14 +139,14 @@
                                 d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                         </svg>
                     </div>
-                </button>
+                </a>
 
                 <button class="group px-8 py-4 bg-[#1a1a2e] border border-indigo-500/50 
          rounded-xl hover:border-indigo-400 hover:shadow-lg 
          hover:shadow-indigo-500/30 transition-all">
 
                     <div class="flex items-center gap-2">
-                        <span>View Cybersecurity Lab</span>
+                        <span>View iOS Development</span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
@@ -189,7 +162,7 @@
          hover:shadow-purple-500/30 transition-all">
 
                     <div class="flex items-center gap-2">
-                        <span>View Games</span>
+                        <span>View Cybersecurity Labs</span>
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor"
@@ -215,8 +188,7 @@
                         </div>
                         <div
                             class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-indigo-500/50 overflow-hidden ring-4 ring-indigo-500/20">
-                            <img src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjY0NjcwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                                alt="Profile" class="w-full h-full object-cover">
+                            <img src="/public/images/profile.png" alt="Profile" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <div class="flex-1 text-center md:text-left">
@@ -226,11 +198,13 @@
                             </span>
                         </h2>
                         <p class="text-lg text-gray-300 mb-4">
-                            Offensive Security Specialist & Software Developer
+                            Full-Stack Web & iOS Developer · Security & Offensive Thinking
                         </p>
                         <p class="text-gray-400 max-w-2xl">
-                            I build secure, scalable web applications and actively explore offensive security
-                            techniques to better understand how systems fail and how to protect them.
+                            I design and build modern, scalable web and iOS applications with a strong focus on clean
+                            architecture,
+                            performance, and security. My interest in offensive security helps me write safer code
+                            and design more resilient systems.
                         </p>
                     </div>
                 </div>
@@ -249,7 +223,7 @@
                             <div
                                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-600">
                                 50+</div>
-                            <div class="text-sm text-gray-400 mt-2">Writeups</div>
+                            <div class="text-sm text-gray-400 mt-2">Web Projects</div>
                         </div>
                     </div>
                     <div
@@ -261,7 +235,7 @@
                             <div
                                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
                                 25+</div>
-                            <div class="text-sm text-gray-400 mt-2">Projects</div>
+                            <div class="text-sm text-gray-400 mt-2">iOS Projects</div>
                         </div>
                     </div>
                     <div
@@ -273,7 +247,7 @@
                             <div
                                 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">
                                 12+</div>
-                            <div class="text-sm text-gray-400 mt-2">Python Games</div>
+                            <div class="text-sm text-gray-400 mt-2">Writeups</div>
                         </div>
                     </div>
                     <div
@@ -293,18 +267,16 @@
             </div>
         </section>
     </main>
+    <div id="footer"></div>
 
-
-    <footer class="relative z-10 mt-24 border-t border-indigo-500/20">
-        <div class="max-w-7xl mx-auto px-6 py-6 text-center">
-            <p class="text-sm text-gray-400">
-                © 2025 <span class="text-indigo-400 font-medium">Alejandro Alonso</span>
-                <span class="mx-1 text-gray-500">·</span>
-                Built with <span class="text-pink-400">passion</span>.
-            </p>
-        </div>
-    </footer>
-
+    <script src="/utils/scripts/terminal.js" defer></script>
+    <script src="/utils/scripts/loadComponents.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader("home");
+            loadFooter();
+        });
+    </script>
 </body>
 
 </html>

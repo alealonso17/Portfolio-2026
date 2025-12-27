@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me — Alejandro Alonso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0a0a0f;
+        }
+
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #6366f1, #8b5cf6);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #8b5cf6, #a855f7);
+        }
+
+        ::selection {
+            background-color: rgba(99, 102, 241, 0.3);
+            color: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#0a0a0f] text-gray-100">
+
+    <!-- Fondo de cuadrícula animada -->
+    <div
+        class="fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]">
+    </div>
+
+    <!-- Navegación -->
+    <div id="header"></div>
+
+    <!-- Contenido Principal -->
+    <main class="relative">
+        <!-- ABOUT ME -->
+        <section id="about" class="section-content">
+            <div class="min-h-screen py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <!-- Header -->
+                    <div class="text-center mb-12">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400 mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Meet the Developer</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                                About Me
+                            </span>
+                        </h1>
+                    </div>
+
+                    <!-- Intro -->
+                    <div class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-8 mb-12">
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            I'm a Computer Science student and full-stack developer with a strong focus on building
+                            scalable web and iOS applications. I enjoy turning ideas into real products, paying close
+                            attention to clean architecture, performance, and user experience.
+                        </p>
+
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            Most of my learning happens through hands-on projects: developing full-stack platforms,
+                            building mobile applications, and designing systems end-to-end — from backend logic and APIs
+                            to frontend and UI/UX details.
+                        </p>
+
+                        <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                            Alongside development, I have a strong interest in offensive security and penetration
+                            testing.
+                            Exploring how applications break helps me write safer code, design more resilient systems,
+                            and approach development with a security-aware mindset.
+                        </p>
+
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            My mindset is simple:
+                            <span class="text-indigo-400 font-semibold">Build → Understand → Improve</span>.
+                            I aim to grow as a web and iOS developer while using my security background as a strength,
+                            continuously learning and documenting my journey through projects and experiments.
+                        </p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                                Skills & Expertise
+                            </span>
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Skill 1 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/50 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                        <i class="fas fa-code text-green-400"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">Development</h3>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-green-400 mt-0.5"></i>
+                                        <span>Full-Stack Web Development (Frontend & Backend)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-green-400 mt-0.5"></i>
+                                        <span>iOS App Development (Swift & SwiftUI)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-green-400 mt-0.5"></i>
+                                        <span>Authentication, Authorization & Secure Application Design</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-green-400 mt-0.5"></i>
+                                        <span>Modern Frontend & UI/UX Practices</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Skill 2 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+                                        <i class="fas fa-shield-alt text-indigo-400"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">Cybersecurity</h3>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-indigo-400 mt-0.5"></i>
+                                        <span>Penetration Testing (Web & Network)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-indigo-400 mt-0.5"></i>
+                                        <span>Vulnerability Assessment & Exploitation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-indigo-400 mt-0.5"></i>
+                                        <span>OWASP Top 10 & Secure Development Practices</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-indigo-400 mt-0.5"></i>
+                                        <span>CTFs & Hands-on Security Labs</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Skill 3 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                        <i class="fas fa-terminal text-purple-400"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">Programming Languages & Foundations</h3>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-purple-400 mt-0.5"></i>
+                                        <span>Programming Languages: Python, JavaScript, C#, swift, swiftUI, MySQL,
+                                            MSSQL...</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-purple-400 mt-0.5"></i>
+                                        <span>Object-Oriented Programming & Design Principles</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-purple-400 mt-0.5"></i>
+                                        <span>Strong Problem Solving</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-purple-400 mt-0.5"></i>
+                                        <span>Automation, Scripting & Custom Tools</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Skill 4 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/50 transition-all">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+                                        <i class="fas fa-database text-cyan-400"></i>
+                                    </div>
+                                    <h3 class="text-xl font-semibold">Linux & Tools</h3>
+                                </div>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-0.5"></i>
+                                        <span>Linux Environments & System Fundamentals</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-0.5"></i>
+                                        <span>Bash/Python Scripting & Automation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-0.5"></i>
+                                        <span>Security & Recon Tools (Nmap, Burp, Metasploit...)</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-gray-400">
+                                        <i class="fas fa-check-circle text-cyan-400 mt-0.5"></i>
+                                        <span>Version Control & CI Basics (Git, GitHub)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Journey -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                                Learning Journey
+                            </span>
+                        </h2>
+                        <div class="space-y-6">
+                            <!-- Timeline Item 1 -->
+
+
+                            <div class="relative pl-8 border-l-2 border-green-500/50">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-green-500 border-4 border-[#0a0a0f]">
+                                </div>
+                                <div
+                                    class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/50 transition-all">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold text-green-400">Hackathons & Personal Projects
+                                        </h3>
+                                        <span class="text-sm text-gray-500">2025 - Present</span>
+                                    </div>
+                                    <p class="text-gray-400">
+                                        Participated in hackathons and built multiple personal projects combining
+                                        full-stack development
+                                        and security awareness, focusing on real-world problems, clean architecture, and
+                                        practical impact.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 2 -->
+                            <div class="relative pl-8 border-l-2 border-purple-500/50">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#0a0a0f]">
+                                </div>
+                                <div
+                                    class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition-all">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold text-purple-400">Offensive Security & CTF
+                                            Platforms</h3>
+                                        <span class="text-sm text-gray-500">2024 - Present</span>
+                                    </div>
+                                    <p class="text-gray-400">
+                                        Started an intensive hands-on journey in offensive security using platforms like
+                                        Hack The Box solving realistic machines and challenges while documenting my
+                                        learning through
+                                        detailed writeups.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 3 -->
+                            <div class="relative pl-8 border-l-2 border-indigo-500/50">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-500 border-4 border-[#0a0a0f]">
+                                </div>
+                                <div
+                                    class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 transition-all">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold text-indigo-400">Computer Science Degree &
+                                            Software Foundations</h3>
+                                        <span class="text-sm text-gray-500">2024 - Present</span>
+                                    </div>
+                                    <p class="text-gray-400">
+                                        Enrolled in a Computer Science degree to strengthen my foundations in software
+                                        engineering,
+                                        algorithms, data structures, and secure system design.
+                                        Currently performing at
+                                        <span class="text-indigo-400 font-medium">distinction level</span>,
+                                        with the aim of graduating with
+                                        <span class="text-purple-400 font-medium">honours</span>,
+                                        while continuing to develop personal projects alongside my studies.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 4 -->
+                            <div class="relative pl-8 border-l-2 border-pink-500/50">
+                                <div
+                                    class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-pink-500 border-4 border-[#0a0a0f]">
+                                </div>
+                                <div
+                                    class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-pink-500/20 rounded-xl p-6 hover:border-pink-500/50 transition-all">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-semibold text-pink-400">Self-Taught Programming Journey
+                                        </h3>
+                                        <span class="text-sm text-gray-500">2019 </span>
+                                    </div>
+                                    <p class="text-gray-400">
+                                        Began learning programming independently at a young age, starting with Python
+                                        and c++.
+                                        Explored problem-solving and competitive programming on platforms like
+                                        Codeforces, building a strong logical mindset and passion for continuous
+                                        self-improvement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Training -->
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold mb-8 text-center">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                                Certifications & Training
+                            </span>
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Certification 1 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/20 transition-all">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-certificate text-2xl text-green-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold mb-2 text-green-400">Hack The Box Academy —
+                                            Offensive Security Training</h3>
+                                        <p class="text-sm text-gray-400 mb-3">
+                                            Hands-on training focused on web exploitation, privilege escalation,
+                                            Active Directory fundamentals, and real-world attack scenarios.
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="px-2 py-1 bg-green-500/10 border border-green-500/30 rounded-md text-xs text-green-400">2025-Present</span>
+                                            <span
+                                                class="px-2 py-1 bg-green-500/10 border border-green-500/30 rounded-md text-xs text-green-400">On
+                                                going</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 2 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-trophy text-2xl text-blue-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold mb-2 text-blue-400">First Lego League —
+                                            Robotics & Scientific Projects
+                                        </h3>
+                                        <p class="text-sm text-gray-400 mb-3">
+                                            Competed at national level in Spain, achieving:
+                                            <span class="text-indigo-400 font-semibold">2nd place in Robotics</span>,
+                                            <span class="text-purple-400 font-semibold">1st place in Team Values</span>,
+                                            and <span class="text-cyan-400 font-semibold">4th place in Scientific
+                                                Project</span>.
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="px-2 py-1 bg-blue-500/10 border border-blue-500/30 rounded-md text-xs text-blue-400">2023</span>
+                                            <span
+                                                class="px-2 py-1 bg-blue-500/10 border border-blue-500/30 rounded-md text-xs text-blue-400">Active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 3 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-graduation-cap text-2xl text-purple-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold mb-2 text-purple-400">Languages
+                                        </h3>
+                                        <p class="text-sm text-gray-400 mb-3">
+                                            Spanish (Native) · English (Advanced – Cambridge Certificate) · Basque (B2)
+                                        </p>
+                                        <div class="flex items-center gap-2">
+
+
+                                            <span
+                                                class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">More
+                                                coming soon...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification 4 -->
+                            <div
+                                class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all">
+                                <div class="flex items-start gap-4">
+                                    <div
+                                        class="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-code text-2xl text-indigo-400"></i>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="text-lg font-semibold mb-2 text-indigo-400">Early Technical
+                                            Competitions & Awards</h3>
+                                        <p class="text-sm text-gray-400 mb-3">
+                                            Participated in national-level STEM competitions from an early age,
+                                            developing problem-solving skills, teamwork, and a strong technical mindset
+                                            through robotics, scientific research, and engineering challenges.
+                                        </p>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="px-2 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-md text-xs text-indigo-400">2017</span>
+                                            <span
+                                                class="px-2 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-md text-xs text-indigo-400">National
+                                                Level </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy -->
+
+                    <!-- Philosophy Card -->
+                    <div
+                        class="bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-500/30 rounded-2xl p-12 text-center mb-16 animate-scaleIn delay-900">
+                        <div class="max-w-4xl mx-auto">
+                            <i class="fas fa-lightbulb text-5xl text-yellow-400 mb-6 animate-pulse-slow"></i>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                                <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                                    My Philosophy
+                                </span>
+                            </h3>
+
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                                <div class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-hammer text-2xl text-green-400"></i>
+                                    </div>
+                                    <div class="text-2xl font-bold text-green-400 mb-2">Build</div>
+                                    <p class="text-sm text-gray-400">Create applications and understand their
+                                        architecture from the ground up</p>
+                                </div>
+
+                                <div class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-red-500/30 rounded-xl p-6">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-red-500/20 border border-red-500/50 flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-bug text-2xl text-red-400"></i>
+                                    </div>
+                                    <div class="text-2xl font-bold text-red-400 mb-2">Break</div>
+                                    <p class="text-sm text-gray-400">Test security through ethical hacking and
+                                        penetration testing techniques</p>
+                                </div>
+
+                                <div class="bg-[#1a1a2e]/50 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-blue-500/20 border border-blue-500/50 flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-shield-alt text-2xl text-blue-400"></i>
+                                    </div>
+                                    <div class="text-2xl font-bold text-blue-400 mb-2">Secure</div>
+                                    <p class="text-sm text-gray-400">Apply lessons learned to build resilient and secure
+                                        systems</p>
+                                </div>
+                            </div>
+
+                            <p class="text-xl text-gray-300 leading-relaxed">
+                                "Security isn't a feature you add at the end—it's a mindset you build from the
+                                beginning.
+                                Every line of code is an opportunity to either create or prevent a vulnerability."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="/utils/scripts/loadComponents.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader("about");
+            loadFooter();
+        });
+    </script>
+</body>
+
+</html>

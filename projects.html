@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Projects & Security — Alejandro Alonso</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0a0a0f;
+    }
+    
+    /* Scrollbar personalizado */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0a0f;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #6366f1, #8b5cf6);
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #8b5cf6, #a855f7);
+    }
+    
+    ::selection {
+      background-color: rgba(99, 102, 241, 0.3);
+      color: #ffffff;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-[#0a0a0f] text-gray-100">
+
+  <!-- Fondo de cuadrícula animada -->
+  <div class="fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
+
+  <!-- Navegación -->
+  <div id="header"></div>
+  <!-- Contenido Principal -->
+  <main class="relative">
+    <!-- WEB PROJECTS -->
+    <section id="web" class="section-content">
+      <div class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Header -->
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400 mb-4">
+              <i class="fas fa-globe"></i>
+              <span>Full-Stack Development with Security Focus</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
+                Web Projects & Security
+              </span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+              Production-ready web applications built with security as a first-class citizen. 
+              Every project includes comprehensive security documentation.
+            </p>
+          </div>
+
+          <!-- Projects -->
+          <div class="space-y-8" id="projects">
+           
+          
+            
+          <!-- Security Banner -->
+          <div class="mt-12 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-xl p-8 text-center">
+            <i class="fas fa-shield-alt text-4xl text-indigo-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-2">Security-First Development</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+              Every project undergoes security review, implements OWASP best practices, 
+              and includes comprehensive documentation of security measures and threat models.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+  <div id="footer"></div>
+      <script src="/utils/scripts/loadComponents.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader("projects");
+            loadFooter();
+        });
+    </script>
+    <script src="utils/scripts/webProjects.js" type="module"></script>
+</body>
+</html>
