@@ -1,16 +1,20 @@
 {
   "labs": [
     {
-      "title": "Machine Name",
+      "title": "Jerry",
       "difficulty": "Easy",
-      "description": "Short summary of the target, main goal and what is being exploited.",
+      "description": "Exploitation of an Apache Tomcat Manager instance by bypassing Basic Authentication using exposed default credentials, leading to WAR file upload and remote code execution via a reverse shell.",
       "keyWords": [
-        "Enumeration",
-        "Linux",
-        "Web"
+        "Apache Tomcat",
+        "Authentication Bypass",
+        "Base64 Encoding",
+        "Burp Suite",
+        "Reverse Shell",
+        "Windows"
       ],
       "platform": "Hack The Box",
-      "time": "2h 15m"
+      "time": "2h 15m",
+      "path" : "/public/docs/writeups/WriteupJerry.pdf"
     },
     {
       "title": "Machine Name",
@@ -22,7 +26,8 @@
         "SUID"
       ],
       "platform": "TryHackMe",
-      "time": "3h 40m"
+      "time": "3h 40m",
+      "path" :"/public/docs/writeups/WriteupJerry.pdf"
     },
     {
       "title": "Machine Name",
@@ -34,7 +39,8 @@
         "Lateral Movement"
       ],
       "platform": "Hack The Box",
-      "time": "6h 10m"
+      "time": "6h 10m",
+      "path" :"/public/docs/writeups/WriteupJerry.pdf"
     },
     {
       "title": "Custom Lab",
@@ -46,7 +52,8 @@
         "Web Security"
       ],
       "platform": "Self-hosted",
-      "time": "1h 30m"
+      "time": "1h 30m",
+      "path" :"/public/docs/writeups/WriteupJerry.pdf"
     }
   ]
 }

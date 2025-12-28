@@ -64,10 +64,10 @@ writeupsInfo.forEach(writeup => {
       </div>
 
       <div class="pt-4 border-t border-gray-800">
-        <button class="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+        <a href=${writeup.path} class="text-sm text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
           Read Writeup
           <i class="fas fa-chevron-right"></i>
-        </button>
+        </a>
       </div>
 
     </div>
