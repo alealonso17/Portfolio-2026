@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+  "id": "deepfocus",
+  "title": "DeepFocus",
+  "description": "Productivity-focused iOS app that combines a task manager, a Pomodoro timer and a visual progress dashboard to improve focus and concentration.",
+  "techStack": [
+    "Swift",
+    "SwiftUI",
+    "SwiftData",
+    "Combine"
+  ],
+  "status": "beta",
+  "downloads": "—",
+  "rating": "—",
+  "version": "v0.9.0",
+  "image": "/public/images/ios/deepFocus.png",
+  "storeLink": "#",
+  "githubLink": "#"
+}
+  ]
+}

@@ -1,6 +1,29 @@
 {
   "projects": [
     {
+  "id": "css2tw",
+  "title": "CSS2TW",
+  "description": "A lightweight web tool that converts traditional CSS into Tailwind utility classes, featuring smart autocomplete to help developers learn and recall syntax while they type.",
+  "techStack": [
+    "React",
+    "Vite",
+    "TailwindCSS",
+    "JavaScript",
+    "Monaco Editor"
+  ],
+  "securityFeatures": [
+    "No user authentication required",
+    "Client-side only processing",
+    "No data persistence",
+    "No external API calls",
+    "Safe input handling"
+  ],
+  "architecture": "Client-side single-page application built with React and Vite, using a custom CSS-to-Tailwind mapping engine and Monaco Editor for live autocomplete and code editing.",
+  "githubLink": "https://github.com/alealonso17/CSS2TW",
+  "securityDoc": "/docs/css2tw-security.pdf",
+  "image": "/public/images/webs/css2tw.png"
+},
+    {
       "id": "uniconnect",
       "title": "UniConnect",
       "description": "A university-focused social network designed to connect students through posts, profiles and interactions, with strong emphasis on security, scalability and clean UI/UX.",
