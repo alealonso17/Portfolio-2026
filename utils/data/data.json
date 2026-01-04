@@ -1,28 +1,51 @@
 {
   "projects": [
     {
-  "id": "css2tw",
-  "title": "CSS2TW",
-  "description": "A lightweight web tool that converts traditional CSS into Tailwind utility classes, featuring smart autocomplete to help developers learn and recall syntax while they type.",
-  "techStack": [
-    "React",
-    "Vite",
-    "TailwindCSS",
-    "JavaScript",
-    "Monaco Editor"
-  ],
-  "securityFeatures": [
-    "No user authentication required",
-    "Client-side only processing",
-    "No data persistence",
-    "No external API calls",
-    "Safe input handling"
-  ],
-  "architecture": "Client-side single-page application built with React and Vite, using a custom CSS-to-Tailwind mapping engine and Monaco Editor for live autocomplete and code editing.",
-  "githubLink": "https://github.com/alealonso17/CSS2TW",
-  "securityDoc": "/docs/css2tw-security.pdf",
-  "image": "/public/images/webs/css2tw.png"
-},
+      "id": "sky-forecast",
+      "title": "skyForecast",
+      "description": "A clean and responsive weather application that provides current conditions, detailed metrics, and a 7-day forecast using real-time data from the Open-Meteo API.",
+      "techStack": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "JavaScript",
+        "Open-Meteo API"
+      ],
+      "securityFeatures": [
+        "No user authentication required",
+        "Client-side only data fetching",
+        "No data persistence",
+        "No sensitive user data stored",
+        "Read-only public API usage"
+      ],
+      "architecture": "Client-side single-page application built with React and Vite, featuring modular components for current weather, forecast details, and weekly predictions.",
+      "githubLink": "https://github.com/alealonso17/SkyForecast",
+      "securityDoc": "/docs/skyforecast-security.pdf",
+      "image": "/public/images/webs/skyforecast.png"
+    },
+    {
+      "id": "css2tw",
+      "title": "CSS2TW",
+      "description": "A lightweight web tool that converts traditional CSS into Tailwind utility classes, featuring smart autocomplete to help developers learn and recall syntax while they type.",
+      "techStack": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "JavaScript",
+        "Monaco Editor"
+      ],
+      "securityFeatures": [
+        "No user authentication required",
+        "Client-side only processing",
+        "No data persistence",
+        "No external API calls",
+        "Safe input handling"
+      ],
+      "architecture": "Client-side single-page application built with React and Vite, using a custom CSS-to-Tailwind mapping engine and Monaco Editor for live autocomplete and code editing.",
+      "githubLink": "https://github.com/alealonso17/CSS2TW",
+      "securityDoc": "/docs/css2tw-security.pdf",
+      "image": "/public/images/webs/css2tw.png"
+    },
     {
       "id": "uniconnect",
       "title": "UniConnect",
@@ -47,9 +70,8 @@
       "architecture": "Full-stack MVC architecture with RESTful API, separated frontend and backend layers, and a relational database schema designed for scalability.",
       "githubLink": "https://github.com/yourusername/uniconnect",
       "securityDoc": "/docs/uniconnect-security.pdf",
-      "image":"/public/images/webs/uniconnect.png"
+      "image": "/public/images/webs/uniconnect.png"
     },
-
     {
       "id": "wild-buddy",
       "title": "Wild Buddy",
@@ -70,9 +92,8 @@
       "architecture": "Modular Python application with separated data processing, model inference and visualization layers.",
       "githubLink": "https://github.com/yourusername/wild-buddy",
       "securityDoc": "/docs/wild-buddy-security.pdf",
-      "image":"/public/images/webs/wild.png"
+      "image": "/public/images/webs/wild.png"
     },
-
     {
       "id": "deadline-hell",
       "title": "Deadline Hell",
@@ -94,9 +115,8 @@
       "architecture": "Server-rendered web application with Express, structured routing and database-driven task management.",
       "githubLink": "https://github.com/yourusername/deadline-hell",
       "securityDoc": "/docs/deadline-hell-security.pdf",
-      "image":"/public/images/webs/deadline.png"
+      "image": "/public/images/webs/deadline.png"
     },
-
     {
       "id": "bakio-surf-cleaner",
       "title": "Bakio Surf Cleaner",
@@ -115,7 +135,7 @@
       "architecture": "Standalone desktop application with a simple GUI layer and a backend processing engine for video management.",
       "githubLink": "https://github.com/yourusername/bakio-surf-cleaner",
       "securityDoc": "/docs/bakio-surf-cleaner-security.pdf",
-      "image":"/public/images/webs/bakio.png"
+      "image": "/public/images/webs/bakio.png"
     }
   ]
 }
