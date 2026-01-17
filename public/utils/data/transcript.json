@@ -1,0 +1,102 @@
+{
+  "degree": "BSc Computer Science",
+  "university": "Robert Gordon University",
+  "years": {
+    "year1": {
+      "label": "Stage 1",
+      "ongoing": false,
+      "average": "A",
+      "semesters": {
+        "semester1": {
+          "label": "Semester 1",
+          "core": [
+            {
+              "code": "CM1109",
+              "name": "Exploring Computing Devices",
+              "grade": "A"
+            },
+            {
+              "code": "CM1112",
+              "name": "Introduction to Programming",
+              "grade": "A"
+            },
+            {
+              "code": "CM1119",
+              "name": "Problem Solving and Maths",
+              "grade": "A"
+            }
+          ],
+          "electives": [
+            {
+              "code": "CM1131",
+              "name": "Cybersecurity Fundamentals",
+              "grade": "A"
+            }
+          ]
+        },
+        "semester2": {
+          "label": "Semester 2",
+          "core": [
+            {
+              "code": "CM1113",
+              "name": "Software Design and Development",
+              "grade": "A"
+            },
+            {
+              "code": "CM1121",
+              "name": "Web UX",
+              "grade": "B"
+            },
+            {
+              "code": "CM1120",
+              "name": "Database Systems",
+              "grade": "B"
+            }
+          ],
+          "electives": [
+            {
+              "code": "CM1123",
+              "name": "Data Analysis",
+              "grade": "A"
+            }
+          ]
+        }
+      }
+    },
+
+    "year2": {
+      "label": "Stage 2",
+      "ongoing": true,
+      "average": "A",
+      "semesters": {
+        "semester1": {
+          "label": "Semester 1",
+          "core": [
+            {
+              "code": "CM2115",
+              "name": "Advanced Software Design and Development",
+              "grade": "A"
+            },
+            {
+              "code": "CE2000",
+              "name": "Dynamic Web Technologies",
+              "grade": "A"
+            },
+            {
+              "code": "CM2112",
+              "name": "Real World Project and Professional Skills",
+              "grade": "B"
+            }
+          ],
+          "electives": [
+            {
+              "code": "CM2137",
+              "name": "Data Mining",
+              "grade": "A"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "projects": [
+    {
+      "id": "sky-forecast",
+      "title": "skyForecast",
+      "description": "A clean and responsive weather application that provides current conditions, detailed metrics, and a 7-day forecast using real-time data from the Open-Meteo API.",
+      "techStack": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "JavaScript",
+        "Open-Meteo API"
+      ],
+      "securityFeatures": [
+        "No user authentication required",
+        "Client-side only data fetching",
+        "No data persistence",
+        "No sensitive user data stored",
+        "Read-only public API usage"
+      ],
+      "architecture": "Client-side single-page application built with React and Vite, featuring modular components for current weather, forecast details, and weekly predictions.",
+      "githubLink": "https://github.com/alealonso17/SkyForecast",
+      "securityDoc": "/docs/skyforecast-security.pdf",
+      "image": "/images/webs/skyforecast.png",
+      "pageLink": "https://sky-forecast-gamma.vercel.app"
+    },
+    {
+      "id": "css2tw",
+      "title": "CSS2TW",
+      "description": "A lightweight web tool that converts traditional CSS into Tailwind utility classes, featuring smart autocomplete to help developers learn and recall syntax while they type.",
+      "techStack": [
+        "React",
+        "Vite",
+        "TailwindCSS",
+        "JavaScript",
+        "Monaco Editor"
+      ],
+      "securityFeatures": [
+        "No user authentication required",
+        "Client-side only processing",
+        "No data persistence",
+        "No external API calls",
+        "Safe input handling"
+      ],
+      "architecture": "Client-side single-page application built with React and Vite, using a custom CSS-to-Tailwind mapping engine and Monaco Editor for live autocomplete and code editing.",
+      "githubLink": "https://github.com/alealonso17/CSS2TW",
+      "securityDoc": "/docs/css2tw-security.pdf",
+      "image": "/images/webs/css2tw.png",
+      "pageLink": "https://css-2-tw-cyan.vercel.app"
+    },
+    {
+      "id": "uniconnect",
+      "title": "UniConnect",
+      "description": "A university-focused social network designed to connect students through posts, profiles and interactions, with strong emphasis on security, scalability and clean UI/UX.",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MySQL",
+        "TailwindCSS",
+        "JavaScript",
+        "Figma"
+      ],
+      "securityFeatures": [
+        "OWASP Top 10 mitigations",
+        "JWT authentication",
+        "Password hashing (bcrypt)",
+        "Rate limiting",
+        "Input validation & sanitization",
+        "Access control & authorization",
+        "Secure session handling"
+      ],
+      "architecture": "Full-stack MVC architecture with RESTful API, separated frontend and backend layers, and a relational database schema designed for scalability.",
+      "githubLink": "https://github.com/alealonso17/UniConnect",
+      "securityDoc": "/docs/uniconnect-security.pdf",
+      "image": "/images/webs/uniconnect.png"
+    },
+    {
+      "id": "wild-buddy",
+      "title": "Wild Buddy",
+      "description": "A machine learning project focused on animal identification and tracking, designed to assist students, researchers and wildlife enthusiasts.",
+      "techStack": [
+        "Python",
+        "scikit-learn",
+        "pandas",
+        "NumPy",
+        "OpenCV"
+      ],
+      "securityFeatures": [
+        "Input validation for uploaded data",
+        "Safe file handling",
+        "Local data processing (no cloud dependency)",
+        "Model integrity checks"
+      ],
+      "architecture": "Modular Python application with separated data processing, model inference and visualization layers.",
+      "githubLink": "https://github.com/alealonso17/WildBuddy",
+      "securityDoc": "/docs/wild-buddy-security.pdf",
+      "image": "/images/webs/wild.png"
+    },
+    {
+      "id": "deadline-hell",
+      "title": "Deadline Hell",
+      "description": "A productivity web application built to help students track deadlines, assessments and academic workload efficiently.",
+      "techStack": [
+        "Node.js",
+        "Express",
+        "MySQL",
+        "TailwindCSS",
+        "JavaScript"
+      ],
+      "securityFeatures": [
+        "Secure authentication",
+        "User data isolation",
+        "Protected routes",
+        "Input validation",
+        "SQL injection prevention"
+      ],
+      "architecture": "Server-rendered web application with Express, structured routing and database-driven task management.",
+      "githubLink": "https://github.com/alealonso17/Deadline-Hell",
+      "securityDoc": "/docs/deadline-hell-security.pdf",
+      "image": "/images/webs/deadline.png",
+      "pageLink": "https://stupendous-pika-b5c885.netlify.app"
+    },
+    {
+      "id": "bakio-surf-cleaner",
+      "title": "Bakio Surf Cleaner",
+      "description": "A desktop application created for a surf school to automatically clean and organize session video clips, saving time for instructors and staff.",
+      "techStack": [
+        "Python",
+        "Tkinter",
+        "FFmpeg"
+      ],
+      "securityFeatures": [
+        "Local-only processing",
+        "Safe file handling",
+        "Controlled directory access",
+        "No external data transmission"
+      ],
+      "architecture": "Standalone desktop application with a simple GUI layer and a backend processing engine for video management.",
+      "githubLink": "https://github.com/alealonso17/BakioSurf",
+      "securityDoc": "/docs/bakio-surf-cleaner-security.pdf",
+      "image": "/images/webs/bakio.png"
+    }
+  ]
+}

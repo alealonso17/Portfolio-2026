@@ -1,0 +1,38 @@
+{
+  "labs": [
+    {
+      "title": "Jerry",
+      "difficulty": "Easy",
+      "description": "Exploitation of an Apache Tomcat Manager instance by bypassing Basic Authentication using exposed default credentials, leading to WAR file upload and remote code execution via a reverse shell.",
+      "keyWords": [
+        "Apache Tomcat",
+        "Authentication Bypass",
+        "Base64 Encoding",
+        "Burp Suite",
+        "Reverse Shell",
+        "Windows"
+      ],
+      "platform": "Hack The Box",
+      "time": "2h 15m",
+      "path" : "/public/docs/writeups/WriteupJerry.pdf"
+    },
+{
+  "title": "Validation",
+  "difficulty": "Easy",
+  "description": "Web exploitation-focused machine involving HTML injection, XSS and SQL injection due to poor input sanitization. The attack path leads to arbitrary file write via SQL injection, allowing PHP web shell creation and remote code execution, followed by privilege escalation using exposed credentials.",
+  "keyWords": [
+    "HTML Injection",
+    "XSS",
+    "SQL Injection",
+    "Burp Suite",
+    "File Write",
+    "PHP Web Shell",
+    "Reverse Shell",
+    "Linux"
+  ],
+  "platform": "Hack The Box",
+  "time": "2h 30m",
+  "path": "/public/docs/writeups/Validation.pdf"
+}
+]
+}
