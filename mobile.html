@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Apps — Alejandro Alonso</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #0a0a0f;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #6366f1, #8b5cf6);
+        border-radius: 5px;
+      }
+
+      ::selection {
+        background-color: rgba(99, 102, 241, 0.3);
+        color: #ffffff;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen text-gray-100">
+    <!-- Fondo grid -->
+    <div
+      class="fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"
+    ></div>
+
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Main -->
+    <main class="relative">
+      <section id="mobile" class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <!-- Title -->
+          <div class="text-center mb-12">
+            <div
+              class="inline-flex items-center gap-3 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-blue-400 mb-4"
+            >
+              <i class="fab fa-apple"></i>
+              <i class="fab fa-react text-cyan-400"></i>
+              <span>Mobile App Development</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"
+              >
+                Mobile Apps
+              </span>
+            </h1>
+
+            <p class="text-gray-400 max-w-2xl mx-auto">
+              Native and cross-platform mobile applications built with modern
+              technologies, focused on performance, user experience and scalable
+              architecture.
+            </p>
+          </div>
+
+          <!-- Apps Grid -->
+          <div
+            id="ios-apps"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          ></div>
+
+          <!-- Development Stack -->
+          <div class="mt-16 space-y-6">
+
+            <!-- iOS -->
+            <div
+              class="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-xl p-8 text-center"
+            >
+              <i class="fab fa-apple text-4xl text-blue-400 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Native iOS Development</h3>
+              <p class="text-gray-400 max-w-2xl mx-auto">
+                Native iOS applications built using Swift and SwiftUI, following
+                Apple’s Human Interface Guidelines and best practices for
+                performance, accessibility and privacy.
+              </p>
+            </div>
+
+            <!-- React Native -->
+            <div
+              class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-8 text-center"
+            >
+              <i class="fab fa-react text-4xl text-cyan-400 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">
+                Cross-Platform Development
+              </h3>
+              <p class="text-gray-400 max-w-2xl mx-auto">
+                Cross-platform mobile apps built with React Native, Expo and
+                TailwindCSS, designed for rapid iteration, shared logic and
+                scalable architectures across iOS and Android.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Scripts -->
+    <script src="/utils/scripts/loadComponents.js" defer></script>
+    <script src="/utils/scripts/loadIOSApps.js" defer></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        loadHeader("mobile");
+        loadFooter();
+      });
+    </script>
+  </body>
+</html>

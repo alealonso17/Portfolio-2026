@@ -26,9 +26,9 @@ function loadHeader(activePage) {
     activePage
   })}
                 ${navItem({
-    key: "ios",
-    href: "ios.html",
-    label: "iOS",
+    key: "mobile",
+    href: "mobile.html",
+    label: "Mobile",
     icon: ICONS.games,
     activePage
   })}
@@ -65,9 +65,9 @@ function loadHeader(activePage) {
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
       ${mobileItem("Home", "index.html", ICONS.home)}
-      ${mobileItem("Web Projects", "projects.html", ICONS.web)}
+      ${mobileItem("Web Development", "projects.html", ICONS.web)}
+      ${mobileItem("Mobile Development", "mobile.html", ICONS.games)}
       ${mobileItem("Cybersecurity Lab", "labs.html", ICONS.shield)}
-      ${mobileItem("Python Games", "games.html", ICONS.games)}
       ${mobileItem("About Me", "aboutme.html", ICONS.user)}
       ${mobileItem("Contact", "contact.html", ICONS.mail)}
     </div>

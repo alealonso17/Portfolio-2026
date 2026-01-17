@@ -21,7 +21,8 @@
       "architecture": "Client-side single-page application built with React and Vite, featuring modular components for current weather, forecast details, and weekly predictions.",
       "githubLink": "https://github.com/alealonso17/SkyForecast",
       "securityDoc": "/docs/skyforecast-security.pdf",
-      "image": "/public/images/webs/skyforecast.png"
+      "image": "/public/images/webs/skyforecast.png",
+      "pageLink": "https://sky-forecast-gamma.vercel.app"
     },
     {
       "id": "css2tw",
@@ -44,7 +45,8 @@
       "architecture": "Client-side single-page application built with React and Vite, using a custom CSS-to-Tailwind mapping engine and Monaco Editor for live autocomplete and code editing.",
       "githubLink": "https://github.com/alealonso17/CSS2TW",
       "securityDoc": "/docs/css2tw-security.pdf",
-      "image": "/public/images/webs/css2tw.png"
+      "image": "/public/images/webs/css2tw.png",
+      "pageLink": "https://css-2-tw-cyan.vercel.app"
     },
     {
       "id": "uniconnect",
@@ -68,7 +70,7 @@
         "Secure session handling"
       ],
       "architecture": "Full-stack MVC architecture with RESTful API, separated frontend and backend layers, and a relational database schema designed for scalability.",
-      "githubLink": "https://github.com/yourusername/uniconnect",
+      "githubLink": "https://github.com/alealonso17/UniConnect",
       "securityDoc": "/docs/uniconnect-security.pdf",
       "image": "/public/images/webs/uniconnect.png"
     },
@@ -90,7 +92,7 @@
         "Model integrity checks"
       ],
       "architecture": "Modular Python application with separated data processing, model inference and visualization layers.",
-      "githubLink": "https://github.com/yourusername/wild-buddy",
+      "githubLink": "https://github.com/alealonso17/WildBuddy",
       "securityDoc": "/docs/wild-buddy-security.pdf",
       "image": "/public/images/webs/wild.png"
     },
@@ -113,9 +115,10 @@
         "SQL injection prevention"
       ],
       "architecture": "Server-rendered web application with Express, structured routing and database-driven task management.",
-      "githubLink": "https://github.com/yourusername/deadline-hell",
+      "githubLink": "https://github.com/alealonso17/Deadline-Hell",
       "securityDoc": "/docs/deadline-hell-security.pdf",
-      "image": "/public/images/webs/deadline.png"
+      "image": "/public/images/webs/deadline.png",
+      "pageLink": "https://stupendous-pika-b5c885.netlify.app"
     },
     {
       "id": "bakio-surf-cleaner",
@@ -133,7 +136,7 @@
         "No external data transmission"
       ],
       "architecture": "Standalone desktop application with a simple GUI layer and a backend processing engine for video management.",
-      "githubLink": "https://github.com/yourusername/bakio-surf-cleaner",
+      "githubLink": "https://github.com/alealonso17/BakioSurf",
       "securityDoc": "/docs/bakio-surf-cleaner-security.pdf",
       "image": "/public/images/webs/bakio.png"
     }

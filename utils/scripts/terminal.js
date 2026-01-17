@@ -8,11 +8,35 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // --- STATE ---
+  // =====================
+  // STATE
+  // =====================
   let commandHistory = [];
   let historyIndex = -1;
+  let isRoot = false; // 🔥 ROOT MODE FLAG
 
-  // --- HELPERS ---
+  // =====================
+  // UPDATE PROMPT
+  // =====================
+  const updatePrompt = () => {
+    const symbol = document.getElementById("prompt-symbol");
+    if (isRoot) {
+      symbol.innerHTML = "$";
+      symbol.className = "text-red-500";
+    } else {
+      symbol.innerHTML = "$";
+      symbol.className = "text-green-400";
+    }
+  };
+
+  // =====================
+  // HELPERS
+  // =====================
+  const promptSymbol = () =>
+    isRoot
+      ? `<span class="text-red-500">#</span>`
+      : `<span class="text-green-400">$</span>`;
+
   const print = (text, color = "text-indigo-400") => {
     output.innerHTML += `
       <div class="${color} whitespace-pre-line">${text}</div>
@@ -22,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const printCommand = (cmd) => {
     output.innerHTML += `
       <div class="text-gray-500">
-        <span class="text-green-400">$</span> ${cmd}
+        ${promptSymbol()} ${cmd}
       </div>
     `;
   };
@@ -31,26 +55,43 @@ document.addEventListener("DOMContentLoaded", () => {
     output.innerHTML = "";
   };
 
-  // --- INITIAL OUTPUT ---
+  // Typewriter effect
+  const printSlow = async (lines, color = "text-indigo-400", delay = 35) => {
+    for (const line of lines) {
+      let current = "";
+      for (const char of line) {
+        current += char;
+        output.innerHTML += `
+          <div class="${color} whitespace-pre-line">${current}</div>
+        `;
+        await new Promise((r) => setTimeout(r, delay));
+        output.lastElementChild.remove();
+      }
+      print(line, color);
+    }
+  };
+
+  // =====================
+  // INITIAL OUTPUT
+  // =====================
   const printInitialProfile = () => {
     printCommand("cat profile.txt");
-    print("→ Full-Stack IOS/Web Developer", "text-indigo-400");
+    print("→ Full-Stack Web / Mobile Developer", "text-indigo-400");
     print(
       "→ Security-focused mindset with hands-on offensive testing",
       "text-purple-400"
     );
-    print(
-      "→ Machine learning fundamentals & data handling",
-      "text-pink-400"
-    );
+    print("→ Machine learning fundamentals & data handling", "text-pink-400");
   };
 
-  // --- FAKE FILESYSTEM ---
+  // =====================
+  // FAKE FILESYSTEM
+  // =====================
   const files = {
     "profile.txt": `
 Name: Alejandro Alonso
 Role: Full-Stack Developer
-Focus: IOS  & Web apps development
+Focus: Mobile & Web applications
 `,
     "web.txt": `
 Projects are available in the Projects section.
@@ -60,13 +101,15 @@ Use the navigation bar above.
 Hands-on cybersecurity labs and writeups.
 Visit the Cybersecurity Lab section.
 `,
-    "ios.txt": `
-IOS Built apps with swift
-Check the IOS section.
-`
+    "mobile.txt": `
+Mobile apps .
+Check the Mobile section.
+`,
   };
 
-  // --- COMMANDS ---
+  // =====================
+  // COMMANDS
+  // =====================
   const commands = {
     help: () => `
 Available commands:
@@ -85,30 +128,23 @@ Available commands:
 - hint
 `,
 
-    whoami: () =>
-      "Full-Stack Developer · Passionate about Offensive Security",
+    whoami: () => (isRoot ? "root@alex" : "alex"),
 
-    pwd: () =>
-      "/home/alejandro/portfolio",
+    pwd: () => "/home/alejandro/portfolio",
 
-    date: () =>
-      new Date().toString(),
+    date: () => new Date().toString(),
 
-    uname: () =>
-      "Linux portfolio 6.6.0 x86_64",
+    uname: () => "Linux portfolio 6.6.0 x86_64",
 
-    echo: (args) =>
-      args.join(" ") || "",
+    echo: (args) => args.join(" ") || "",
 
-    history: () =>
-      commandHistory.map((c, i) => `${i + 1}  ${c}`).join("\n"),
+    history: () => commandHistory.map((c, i) => `${i + 1}  ${c}`).join("\n"),
 
-    ls: () =>
-      Object.keys(files).join("  "),
+    ls: () => Object.keys(files).join("  "),
 
     "ls -l": () =>
       Object.keys(files)
-        .map(f => `-rw-r--r-- 1 alex alex  ${f}`)
+        .map((f) => `-rw-r--r-- 1 alex alex  ${f}`)
         .join("\n"),
 
     cat: (args) => {
@@ -119,10 +155,8 @@ Available commands:
     },
 
     skills: () => `
-• Full-stack Web and IOS development (Swift, SwiftUI, JavaScript, Node.js, SQL... )
+• Full-stack Web & Mobile development
 • Offensive security & penetration testing
-• Python scripting & automation
-• Machine learning fundamentals & data handling
 `,
 
     clear: () => {
@@ -130,7 +164,7 @@ Available commands:
       return "";
     },
 
-    // 🚫 FORBIDDEN COMMANDS
+    // 🚫 BLOCKED COMMANDS
     cd: () => "Operation not allowed in this environment.",
     rm: () => "Operation not allowed in this environment.",
     mkdir: () => "Operation not allowed in this environment.",
@@ -138,29 +172,48 @@ Available commands:
     nano: () => "Operation not allowed in this environment.",
     vim: () => "Operation not allowed in this environment.",
 
-    // 🧠 HINT (no aparece en help)
-    hint: () =>
-      "Are you sure these are all the commands available?",
+    hint: () => "Are you sure these are all the commands available?",
 
     // 🕵️‍♂️ SECRET COMMAND
-    _s3cret_: () => `
-🧠 You found it.
+    _s3cret_: async () => {
+      isRoot = true;
+      updatePrompt();
 
-Congratulations.
-You didn’t just use the interface —
-you inspected the system.
+      print("TOP SECRET", "text-white font-bold text-4xl text-center");
 
-That’s exactly how offensive security starts.
-
-Thinking outside the box is the real skill.
-`
+      await printSlow(
+        [
+          "",
+          "You found something most users never will.",
+          "",
+          "You didn’t just use the interface —",
+          "you questioned it.",
+          "",
+          "That mindset is the foundation of",
+          "offensive security, reverse engineering",
+          "and real problem solving.",
+          "",
+          "Curiosity > Instructions.",
+          "Understanding > Tools.",
+          "",
+          "Welcome to the other side.",
+        ],
+        "text-indigo-400",
+        35
+      );
+    },
   };
 
-  // --- INPUT HANDLING ---
-  input.addEventListener("keydown", (e) => {
+  // =====================
+  // INPUT HANDLING
+  // =====================
+  input.addEventListener("keydown", async (e) => {
     if (e.key === "Enter") {
       const raw = input.value.trim();
       if (!raw) return;
+
+      // 🔥 CLEAR INPUT IMMEDIATELY (FIX)
+      input.value = "";
 
       commandHistory.push(raw);
       historyIndex = commandHistory.length;
@@ -171,19 +224,19 @@ Thinking outside the box is the real skill.
       const base = parts[0];
       const args = parts.slice(1);
 
-      let result = "";
+      const commandFn = commands[raw] || commands[base];
 
-      if (commands[raw]) {
-        result = commands[raw]();
-      } else if (commands[base]) {
-        result = commands[base](args);
+      if (commandFn) {
+        const result = commandFn(args);
+        if (result instanceof Promise) {
+          await result;
+        } else if (result) {
+          print(result);
+        }
       } else {
         print(`command not found: ${raw}`, "text-red-400");
       }
 
-      if (result) print(result);
-
-      input.value = "";
       terminal.scrollTop = terminal.scrollHeight;
     }
 
@@ -200,7 +253,10 @@ Thinking outside the box is the real skill.
     }
   });
 
-  // --- BOOT TERMINAL ---
+  // =====================
+  // BOOT
+  // =====================
   printInitialProfile();
+  updatePrompt();
   input.focus();
 });

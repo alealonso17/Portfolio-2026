@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cybersecurity Lab — Alejandro Alonso</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
   <style>
     body {
       background-color: #0a0a0f;
     }
-    
-    /* Scrollbar personalizado */
+
     ::-webkit-scrollbar {
       width: 10px;
-      height: 10px;
     }
-    ::-webkit-scrollbar-track {
-      background: #0a0a0f;
-    }
+
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(180deg, #6366f1, #8b5cf6);
       border-radius: 5px;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #8b5cf6, #a855f7);
-    }
-    
+
     ::selection {
       background-color: rgba(99, 102, 241, 0.3);
-      color: #ffffff;
+      color: #fff;
     }
-    
+
     html {
       scroll-behavior: smooth;
     }
@@ -46,299 +47,145 @@
   </style>
 </head>
 
-<body class="min-h-screen bg-[#0a0a0f] text-gray-100">
+<body class="min-h-screen text-gray-100">
 
-  <!-- Fondo de cuadrícula animada -->
+  <!-- Background grid -->
   <div class="fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
 
-  <!-- Navegación -->
- <header id="header"></header>
-  <!-- Contenido Principal -->
+  <!-- Header -->
+  <header id="header"></header>
+
   <main class="relative">
-    <!-- CYBERSECURITY LAB -->
-    <section id="cybersecurity" class="section-content">
-      <div class="min-h-screen py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <!-- Header -->
-          <div class="text-center mb-12">
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400 mb-4">
-              <i class="fas fa-shield-alt"></i>
-              <span>Cybersecurity Research & Practice</span>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
-                Cybersecurity Lab
-              </span>
-            </h1>
-            <p class="text-gray-400 max-w-2xl mx-auto">
-              Documenting my journey through offensive security challenges, 
-              custom tools, and security research.
-            </p>
+    <section id="cybersecurity" class="min-h-screen py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Title -->
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400 mb-4">
+            <i class="fas fa-shield-alt"></i>
+            <span>Cybersecurity Research & Practice</span>
           </div>
 
-          <!-- Tabs -->
-          <div class="flex justify-center mb-8">
-            <div class="inline-flex bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-lg p-1">
-              <button onclick="switchTab('writeups')" id="tab-writeups" class="tab-button px-6 py-2.5 rounded-md text-sm font-semibold transition-all bg-indigo-500/20 text-indigo-400">
-                <i class="fas fa-file-alt mr-2"></i>
-                Personal Writeups
-              </button>
-              <button onclick="switchTab('tools')" id="tab-tools" class="tab-button px-6 py-2.5 rounded-md text-sm font-semibold transition-all text-gray-400 hover:text-gray-200">
-                <i class="fas fa-tools mr-2"></i>
-                Scripts & Tools
-              </button>
-            </div>
-          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
+              Cybersecurity Lab
+            </span>
+          </h1>
 
-          <!-- Personal Writeups Content -->
-          <div id="content-writeups" class="tab-content active">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="writeups">
-             
-            </div>
-          </div>
-
-          <!-- Scripts & Tools Content -->
-          <div id="content-tools" class="tab-content">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Tool 1 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">AutoRecon Pro</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-cyan-400 border-cyan-500/50 bg-cyan-500/10">Python</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Automated reconnaissance tool integrating nmap, gobuster, and vulnerability scanning with custom reporting.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Python</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Automation</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Recon</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>245</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>42 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tool 2 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">SubEnum</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-cyan-400 border-cyan-500/50 bg-cyan-500/10">Python</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Fast subdomain enumeration tool with passive and active discovery methods and DNS validation.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Python</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">DNS</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">OSINT</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>128</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>23 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tool 3 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">PortScan Master</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-cyan-400 border-cyan-500/50 bg-cyan-500/10">Python</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Multi-threaded port scanner with service detection and banner grabbing capabilities.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Python</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Network</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Threading</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>89</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>15 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tool 4 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">Hash Cracker Suite</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-cyan-400 border-cyan-500/50 bg-cyan-500/10">Python</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Password hash cracking toolkit supporting MD5, SHA1, SHA256 with dictionary and brute-force attacks.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Python</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Cryptography</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Brute Force</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>167</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>31 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tool 5 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">Exploit Generator</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-red-400 border-red-500/50 bg-red-500/10">Bash</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Automated exploit template generator for common vulnerabilities with customizable payloads.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Bash</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Exploitation</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Templates</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>203</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>56 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Tool 6 -->
-              <div class="group bg-[#1a1a2e]/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/20 transition-all cursor-pointer">
-                <div class="flex items-start justify-between mb-4">
-                  <h3 class="text-lg font-semibold group-hover:text-indigo-400 transition-colors">Web Fuzzer Pro</h3>
-                  <span class="px-2 py-1 rounded-md text-xs border text-cyan-400 border-cyan-500/50 bg-cyan-500/10">Python</span>
-                </div>
-                <p class="text-sm text-gray-400 mb-4">Advanced web application fuzzer for parameter discovery and injection testing with custom wordlists.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Python</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Fuzzing</span>
-                  <span class="px-2 py-1 bg-purple-500/10 border border-purple-500/30 rounded-md text-xs text-purple-400">Web Security</span>
-                </div>
-                <div class="flex items-center gap-2 mb-4 text-xs text-gray-500">
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-star text-yellow-400"></i>
-                    <span>312</span>
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <i class="fas fa-code-branch"></i>
-                    <span>78 forks</span>
-                  </div>
-                </div>
-                <div class="pt-4 border-t border-gray-800 flex gap-2">
-                  <button class="flex-1 text-sm text-indigo-400 hover:text-indigo-300 flex items-center justify-center gap-1">
-                    <i class="fas fa-code"></i>
-                    View Code
-                  </button>
-                  <button class="text-sm text-green-400 hover:text-green-300 flex items-center gap-1">
-                    <i class="fas fa-download"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Documenting my journey through offensive security challenges,
+            real-world attack paths, tooling and hands-on security research.
+          </p>
         </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-10">
+          <div class="inline-flex bg-[#1a1a2e]/60 backdrop-blur border border-indigo-500/20 rounded-lg p-1">
+            <button
+              id="tab-writeups"
+              onclick="switchTab('writeups')"
+              class="tab-button px-6 py-2 rounded-md text-sm font-semibold bg-indigo-500/20 text-indigo-400 transition"
+            >
+              <i class="fas fa-file-alt mr-2"></i>
+              Personal Writeups
+            </button>
+
+            <button
+              id="tab-tools"
+              onclick="switchTab('tools')"
+              class="tab-button px-6 py-2 rounded-md text-sm font-semibold text-gray-400 hover:text-gray-200 transition"
+            >
+              <i class="fas fa-tools mr-2"></i>
+              Scripts & Tools
+            </button>
+          </div>
+        </div>
+
+        <!-- WRITEUPS -->
+        <div id="content-writeups" class="tab-content active">
+          <div
+            id="writeups"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Writeups injected via JS -->
+
+            <!-- Working on more -->
+            <div
+              class="flex flex-col items-center justify-center text-center bg-[#1a1a2e]/40 backdrop-blur border border-indigo-500/20 rounded-xl p-8"
+            >
+              <i class="fas fa-plus-circle text-4xl text-indigo-400 mb-4"></i>
+              <h3 class="text-lg font-semibold mb-2 text-indigo-300">
+                Working on more
+              </h3>
+              <p class="text-sm text-gray-400 max-w-xs">
+                New offensive security writeups are currently in progress,
+                covering real exploitation paths and misconfigurations.
+              </p>
+              <span class="mt-3 text-xs text-indigo-400">Stay tuned 🚀</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div id="content-tools" class="tab-content">
+          <div class="flex items-center justify-center min-h-[50vh]">
+            <div
+              class="max-w-xl w-full bg-[#1a1a2e]/60 backdrop-blur border border-indigo-500/30 rounded-2xl p-10 text-center shadow-lg shadow-indigo-500/10"
+            >
+              <i class="fas fa-tools text-5xl text-indigo-400 mb-6"></i>
+
+              <h3 class="text-2xl font-bold mb-4 text-indigo-300">
+                Scripts & Tools
+              </h3>
+
+              <p class="text-gray-400 leading-relaxed">
+                This section is currently under active development.
+                <br /><br />
+                It will include custom automation scripts, reconnaissance tools
+                and offensive security utilities built and used during real lab
+                environments and CTF challenges.
+              </p>
+
+              <div class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-sm text-indigo-400">
+                <i class="fas fa-hourglass-half"></i>
+                In active development
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <footer id="footer"></footer>
   </main>
 
+  <!-- Tabs logic -->
   <script>
-    function switchTab(tabName) {
-      // Hide all tab contents
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(c =>
+        c.classList.remove('active')
+      );
+      document.querySelectorAll('.tab-button').forEach(b => {
+        b.classList.remove('bg-indigo-500/20', 'text-indigo-400');
+        b.classList.add('text-gray-400');
       });
 
-      // Remove active state from all tab buttons
-      document.querySelectorAll('.tab-button').forEach(button => {
-        button.classList.remove('bg-indigo-500/20', 'text-indigo-400');
-        button.classList.add('text-gray-400', 'hover:text-gray-200');
-      });
-
-      // Show selected tab content
-      document.getElementById('content-' + tabName).classList.add('active');
-
-      // Add active state to clicked tab button
-      const activeButton = document.getElementById('tab-' + tabName);
-      activeButton.classList.remove('text-gray-400', 'hover:text-gray-200');
-      activeButton.classList.add('bg-indigo-500/20', 'text-indigo-400');
+      document.getElementById('content-' + tab).classList.add('active');
+      const btn = document.getElementById('tab-' + tab);
+      btn.classList.add('bg-indigo-500/20', 'text-indigo-400');
     }
   </script>
 
+  <!-- Components -->
+  <script src="/utils/scripts/loadComponents.js" defer></script>
+  <script src="/utils/scripts/labs.js" type="module"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadHeader("labs");
+      loadFooter();
+    });
+  </script>
 
-    <script src="/utils/scripts/loadComponents.js" defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadHeader("labs");
-            loadFooter();
-        });
-    </script>
-
-    <script src="/utils/scripts/labs.js" type="module"></script>
 </body>
 </html>

@@ -1,22 +1,36 @@
 {
   "apps": [
     {
-  "id": "deepfocus",
-  "title": "DeepFocus",
-  "description": "Productivity-focused iOS app that combines a task manager, a Pomodoro timer and a visual progress dashboard to improve focus and concentration.",
-  "techStack": [
-    "Swift",
-    "SwiftUI",
-    "SwiftData",
-    "Combine"
-  ],
-  "status": "beta",
-  "downloads": "—",
-  "rating": "—",
-  "version": "v0.9.0",
-  "image": "/public/images/ios/deepFocus.png",
-  "storeLink": "#",
-  "githubLink": "#"
-}
+      "id": "bakiosurf",
+      "title": "Bakio Surf",
+      "description": "Gamified mobile application currently being developed for a real surf school in Bakio (Spain). The app transforms surf and bodyboard lessons into a retro-style progression system with avatars, levels, challenges and rewards, helping students stay motivated while allowing instructors to track progression in a playful and engaging way inspired by classic video games.",
+      "techStack": [
+        "React Native",
+        "Expo",
+        "JavaScript",
+        "TailwindCSS",
+        "Figma",
+        "Express",
+        "Nodejs"
+      ],
+      "status": "developing",
+      "downloads": "—",
+      "rating": "—",
+      "version": "v0.1.0",
+      "image": "/public/images/mobile/bakio.png",
+      "doc": "https://docs.google.com/document/d/1EUmT2v_9mb_4xW6vcu2wfkiJ8Ni35lBU/edit?usp=sharing&ouid=116336257119825794932&rtpof=true&sd=true"
+    },
+    {
+      "id": "deepfocus",
+      "title": "DeepFocus",
+      "description": "Productivity-focused iOS app that combines a task manager, a Pomodoro timer and a visual progress dashboard to improve focus and concentration.",
+      "techStack": ["Swift", "SwiftUI", "SwiftData", "Combine"],
+      "status": "beta",
+      "downloads": "—",
+      "rating": "—",
+      "version": "v0.9.0",
+      "image": "/public/images/mobile/deepFocus.png",
+      "githubLink": "https://github.com/alealonso17/DeepFocus"
+    }
   ]
 }

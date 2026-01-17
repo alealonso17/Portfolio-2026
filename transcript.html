@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Transcript — Alejandro Alonso</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body { background-color: #0a0a0f; }
+  </style>
+</head>
+
+<body class="min-h-screen text-white">
+
+  <!-- GRID BACKGROUND -->
+  <div class="fixed inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+
+  <main class="relative max-w-6xl mx-auto px-6 py-16">
+
+    <!-- BACK BUTTON -->
+    <div class="mb-8">
+      <a href="aboutme.html" class="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a2e]/60 backdrop-blur-sm border border-indigo-500/20 rounded-xl text-indigo-400 hover:border-indigo-400 hover:text-indigo-300 transition-all">
+        <i class="fas fa-arrow-left"></i>
+       Go Back
+      </a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-sm mb-4">
+        <i class="fas fa-graduation-cap"></i>
+        Academic Record
+      </div>
+
+      <h1 class="text-4xl font-bold mb-4">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+          Academic Transcript
+        </span>
+      </h1>
+
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Strong academic performance with a consistent Distinction level,
+        focused on software development, security and applied computer science.
+      </p>
+    </div>
+
+    <!-- TRANSCRIPT CONTAINER -->
+    <div id="transcript" class="space-y-12"></div>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const container = document.getElementById("transcript");
+
+      const res = await fetch("/utils/data/transcript.json");
+      const data = await res.json();
+
+      // Display degree and university
+      container.innerHTML += `
+        <div class="bg-[#1a1a2e]/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl p-8 mb-8">
+          <h2 class="text-2xl font-bold text-indigo-400 mb-2">${data.degree}</h2>
+          <p class="text-gray-400">${data.university}</p>
+        </div>
+      `;
+
+      Object.values(data.years).forEach(year => {
+        container.innerHTML += `
+          <div class="bg-[#1a1a2e]/60 backdrop-blur-sm border border-indigo-500/20 rounded-2xl p-8">
+            
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div class="flex flex-col gap-5">
+                <h2 class="text-2xl font-bold text-indigo-400">${year.label}</h2>
+                ${year.ongoing ? '<span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-400 text-sm">Ongoing</span>' : ''}
+              </div>
+
+              <div class="mt-4 md:mt-0 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 font-semibold">
+                Average: ${year.average}
+              </div>
+            </div>
+
+            ${Object.values(year.semesters).map(semester => `
+              <div class="mb-8">
+                <h3 class="text-xl font-semibold text-purple-400 mb-4">${semester.label}</h3>
+                
+                ${semester.core.length > 0 ? `
+                  <div class="mb-6">
+                    <h4 class="text-lg font-medium text-gray-300 mb-3">Core Modules</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      ${semester.core.map(m => `
+                        <div class="bg-[#0a0a0f]/80 border border-indigo-500/20 rounded-xl p-5">
+                          <div class="flex justify-between mb-2">
+                            <h3 class="font-semibold text-gray-200">${m.name}</h3>
+                            <span class="text-green-400 font-bold">${m.grade}</span>
+                          </div>
+                          <p class="text-sm text-gray-500">${m.code}</p>
+                        </div>
+                      `).join("")}
+                    </div>
+                  </div>
+                ` : ''}
+
+                ${semester.electives.length > 0 ? `
+                  <div>
+                    <h4 class="text-lg font-medium text-gray-300 mb-3">Elective Modules</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      ${semester.electives.map(m => `
+                        <div class="bg-[#0a0a0f]/80 border border-purple-500/20 rounded-xl p-5">
+                          <div class="flex justify-between mb-2">
+                            <h3 class="font-semibold text-gray-200">${m.name}</h3>
+                            <span class="text-green-400 font-bold">${m.grade}</span>
+                          </div>
+                          <p class="text-sm text-gray-500">${m.code}</p>
+                        </div>
+                      `).join("")}
+                    </div>
+                  </div>
+                ` : ''}
+              </div>
+            `).join("")}
+          </div>
+        `;
+      });
+    });
+  </script>
+
+</body>
+</html>
